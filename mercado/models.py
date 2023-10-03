@@ -11,3 +11,12 @@ class Marca(models.Model):
 
     def __str__(self):
         return self.nome
+
+class Carne(models.Model):
+    nome = models.CharField(max_length=255)
+    marca = models.CharField(max_length=255)
+    quantidade = models.CharField(max_length=255)
+    preco = models.CharField(max_length=255)
+
+    def __str__(self):
+        return f"{self.nome} ({self.marca})"
