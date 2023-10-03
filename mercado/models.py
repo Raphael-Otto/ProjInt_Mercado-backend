@@ -14,9 +14,24 @@ class Marca(models.Model):
 
 class Carne(models.Model):
     nome = models.CharField(max_length=255)
-    marca = models.CharField(max_length=255)
+    marca = models.ForeignKey(Marca, on_delete=models.PROTECT, related_name="carnes")
     quantidade = models.CharField(max_length=255)
     preco = models.CharField(max_length=255)
+    categoria = models.ForeignKey(
+        Categoria, on_delete=models.PROTECT, related_name="carnes"
+    )
+
+    def __str__(self):
+        return f"{self.nome} ({self.marca})"
+
+class Laticínio(models.Model):
+    nome = models.CharField(max_length=255)
+    marca = models.ForeignKey(Marca, on_delete=models.PROTECT, related_name="laticínios")
+    quantidade = models.CharField(max_length=255)
+    preco = models.CharField(max_length=255)
+    categoria = models.ForeignKey(
+        Categoria, on_delete=models.PROTECT, related_name="laticínios"
+    )
 
     def __str__(self):
         return f"{self.nome} ({self.marca})"
