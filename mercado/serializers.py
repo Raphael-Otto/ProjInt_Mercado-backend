@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
-from mercado.models import Categoria, Marca, Carne, Laticínio
+from mercado.models import Categoria, Marca, Carne, Laticínio, Fruta, Legume, Verdura
 
 class CategoriaSerializer(ModelSerializer):
     class Meta:
@@ -21,5 +21,23 @@ class CarneSerializer(ModelSerializer):
 class LaticínioSerializer(ModelSerializer):
     class Meta:
         model = Laticínio
+        fields = "__all__"
+        depth = 1
+        
+class FrutaSerializer(ModelSerializer):
+    class Meta:
+        model = Fruta
+        fields = "__all__"
+        depth = 1
+        
+class LegumeSerializer(ModelSerializer):
+    class Meta:
+        model = Legume
+        fields = "__all__"
+        depth = 1
+        
+class VerduraSerializer(ModelSerializer):
+    class Meta:
+        model = Verdura
         fields = "__all__"
         depth = 1

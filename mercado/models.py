@@ -35,3 +35,33 @@ class Laticínio(models.Model):
 
     def __str__(self):
         return f"{self.nome} ({self.marca})"
+    
+class Fruta(models.Model):
+    nome = models.CharField(max_length=255)
+    preco = models.CharField(max_length=255)
+    categoria = models.ForeignKey(
+        Categoria, on_delete=models.PROTECT, related_name="frutas"
+    )
+
+    def __str__(self):
+        return self.nome
+    
+class Legume(models.Model):
+    nome = models.CharField(max_length=255)
+    preco = models.CharField(max_length=255)
+    categoria = models.ForeignKey(
+        Categoria, on_delete=models.PROTECT, related_name="legumes"
+    )
+
+    def __str__(self):
+        return self.nome
+    
+class Verdura(models.Model):
+    nome = models.CharField(max_length=255)
+    preco = models.CharField(max_length=255)
+    categoria = models.ForeignKey(
+        Categoria, on_delete=models.PROTECT, related_name="verduras"
+    )
+
+    def __str__(self):
+        return self.nome
