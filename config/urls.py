@@ -4,7 +4,14 @@ from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import ( TokenObtainPairView, TokenRefreshView)
 
-from mercado.views import CategoriaViewSet, MarcaViewSet, CarneViewSet, LaticínioViewSet, FrutaViewSet, LegumeViewSet, VerduraViewSet, BebidaViewSet
+from mercado.views.categoria import CategoriaViewSet;   
+from mercado.views.marca import MarcaViewSet;
+from mercado.views.carne import CarneViewSet;
+from mercado.views.laticinio import LaticínioViewSet;
+from mercado.views.fruta import FrutaViewSet;
+from mercado.views.legume import LegumeViewSet;
+from mercado.views.verdura import VerduraViewSet;
+from mercado.views.bebida import BebidaViewSet;
 
 router = DefaultRouter()
 router.register(r"categorias", CategoriaViewSet)
