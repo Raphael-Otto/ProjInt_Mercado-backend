@@ -2,7 +2,6 @@ from django.contrib import admin
 
 from mercado.models import Categoria, Marca, Carne, Laticínio, Fruta, Legume, Verdura, Bebida
 
-
 admin.site.register(Categoria)
 admin.site.register(Marca)
 admin.site.register(Carne)
