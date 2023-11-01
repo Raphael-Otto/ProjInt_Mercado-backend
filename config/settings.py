@@ -30,7 +30,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://projint-mercado-backend-dev-jext.1.us-1.fl0.io/',
+    'projint-mercado-backend-dev-jext.1.us-1.fl0.io',
 ]
 # Application definition
 
