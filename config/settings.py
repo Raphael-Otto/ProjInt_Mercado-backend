@@ -11,7 +11,7 @@ MODE = os.getenv("MODE")
 
 SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = os.getenv("DEBUG", "False")
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['127.0.0.1']
 CSRF_TRUSTED_ORIGINS = ["http://localhost:3000", "http://localhost:8000", "https://*.fl0.io/"]
 
 
@@ -31,6 +31,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'projint-mercado-backend-dev-jext.1.us-1.fl0.io',
+    '127.0.0.1',
 ]
 # Application definition
 
