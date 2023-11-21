@@ -1,6 +1,6 @@
 from django.db import models
 
-from rest_framework.serializers import ModelSerializer
+from rest_framework.serializers import ModelSerializer, SlugRelatedField
 from mercado.models import Bebida
 
 from uploader.models import Image
