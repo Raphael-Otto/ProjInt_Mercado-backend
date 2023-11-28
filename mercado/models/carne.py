@@ -7,7 +7,7 @@ class Carne(models.Model):
     marca = models.ManyToManyField(Marca, related_name="carnes")
     categoria = models.ManyToManyField(Categoria, related_name="carnes")
     quantidade = models.CharField(max_length=255)
-    preco = models.CharField(max_length=255)
+    preco = models.IntegerField(max_length=255)
     capa = models.ForeignKey(
         Image,
         related_name="+",

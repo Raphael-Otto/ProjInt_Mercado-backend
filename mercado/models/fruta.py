@@ -4,7 +4,7 @@ from uploader.models import Image
 
 class Fruta(models.Model):
     nome = models.CharField(max_length=255)
-    preco = models.CharField(max_length=255)
+    preco = models.IntegerField(max_length=255)
     categoria = models.ForeignKey(
         Categoria, on_delete=models.PROTECT, related_name="frutas"
     )
