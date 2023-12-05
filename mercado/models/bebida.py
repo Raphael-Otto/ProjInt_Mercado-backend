@@ -8,6 +8,7 @@ class Bebida(models.Model):
     categoria = models.ManyToManyField(Categoria, related_name="bebidas")
     quantidade = models.CharField(max_length=255)
     preco = models.IntegerField(max_length=255)
+    descricao = models.CharField(max_length=255)
     capa = models.ForeignKey(
         Image,
         related_name="+",

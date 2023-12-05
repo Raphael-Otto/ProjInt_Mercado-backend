@@ -8,6 +8,7 @@ class Fruta(models.Model):
     categoria = models.ForeignKey(
         Categoria, on_delete=models.PROTECT, related_name="frutas"
     )
+    descricao = models.CharField(max_length=255)
     capa = models.ForeignKey(
         Image,
         related_name="+",
